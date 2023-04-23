@@ -3,7 +3,7 @@
 #include <string.h>
 #include "../../libs/Pilha.h"
 
-/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+//Analisa se os parenteses de uma expressao matematica estão distruibuídos de forma correta
 
 void analisa_expressao(char *s);
 
