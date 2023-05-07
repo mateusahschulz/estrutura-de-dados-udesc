@@ -1,6 +1,6 @@
 [Project]
-FileName=testeDeque.dev
-Name=testeDeque
+FileName=trabalho-pilhas.dev
+Name=trabalho-pilhas
 Type=1
 Ver=2
 ObjFiles=
@@ -51,7 +51,7 @@ AutoIncBuildNr=0
 SyncProduct=1
 
 [Unit1]
-FileName=testeDeque.c
+FileName=main_trabalho_pilhas.c
 CompileCpp=0
 Folder=
 Compile=1
@@ -61,7 +61,7 @@ OverrideBuildCmd=0
 BuildCmd=
 
 [Unit2]
-FileName=Deque.c
+FileName=Pilha.c
 CompileCpp=0
 Folder=
 Compile=1
@@ -71,7 +71,7 @@ OverrideBuildCmd=0
 BuildCmd=
 
 [Unit3]
-FileName=Deque.h
+FileName=Pilha.h
 CompileCpp=0
 Folder=
 Compile=1
