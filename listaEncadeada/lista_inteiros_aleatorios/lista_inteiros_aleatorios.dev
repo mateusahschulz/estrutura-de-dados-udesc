@@ -1,6 +1,6 @@
 [Project]
-FileName=exemplo_insere_ordem.dev
-Name=exemplo_insere_ordem
+FileName=lista_inteiros_aleatorios.dev
+Name=lista_inteiros_aleatorios
 Type=1
 Ver=2
 ObjFiles=
@@ -51,7 +51,7 @@ AutoIncBuildNr=0
 SyncProduct=1
 
 [Unit1]
-FileName=main_insere_ordem.c
+FileName=main_lista_inteiros_aleatorios.c
 CompileCpp=0
 Folder=
 Compile=1
