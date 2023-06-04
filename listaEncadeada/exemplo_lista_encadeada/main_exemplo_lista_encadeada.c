@@ -2,10 +2,9 @@
 #include <stdlib.h>
 #include "../../libs/ListaEncadeada.h"
 
-/* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
 void mostra_float( void *x ){ 				// mostra um float...
-	printf("%.2f\n", *(float *)x ); 		// a partir de um void*
+	printf("%.2f\n", *(float *)x );			// a partir de um void*
 }
 
 
@@ -20,6 +19,11 @@ int main(int argc, char *argv[]) {
 	remove_inicio(&a, &y);
 	insere_fim(&a, &p);
 	remove_fim(&a, &o);
+	insere_pos(&a, &p, 0);
+	insere_pos(&a, &x, 0);
+	remove_pos(&a, &o, 1);
+	le_valor(a, &o, 1);
+	modifica_valor(a, &p, 0);
 	int qtd = conta_elementos(a);
 	printf("Existem %d elementos na lista\n", qtd);
 //	remove_inicio(&a, &y);

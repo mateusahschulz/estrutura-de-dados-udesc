@@ -1,4 +1,5 @@
 #define ERRO_LISTA_VAZIA -1
+#define ERRO_POS_INVALIDA -2
 
 //Elemento de lista
 typedef struct ele {
@@ -18,6 +19,11 @@ int insere_inicio(Lista *p, void *info);
 int remove_inicio(Lista *p, void *info);
 int insere_fim(Lista *p, void *info);
 int remove_fim(Lista *p, void *info);
+int insere_pos(Lista *p, void *info, int pos);
+int remove_pos(Lista *p, void *info, int pos);
+int insere_ordem(Lista *p, void *info, int (*compara)(void*, void*));
 void mostra_lista(Lista l, void (*mostra)(void *));
+int le_valor(Lista l, void *info, int pos);
+int modifica_valor(Lista l, void *info, int pos);
 int conta_elementos(Lista l);
 void limpa_lista(Lista *l);
