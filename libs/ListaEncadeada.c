@@ -8,11 +8,11 @@
 Elemento *aloca_elemento(void *info, int tam){
 	Elemento *p = malloc(sizeof(Elemento));
 	if(p == NULL)
-		return NULL; //Erro, falta de memória.
+		return NULL; //Erro, falta de memÃ³ria.
 	p->info = malloc(tam);
 	if(p->info == NULL){
 		free(p);
-		return NULL; //Erro, falta de memória.
+		return NULL; //Erro, falta de memÃ³ria.
 	}
 	memcpy(p->info, info, tam);
 	return p; //Sucesso!
@@ -33,7 +33,7 @@ int lista_vazia(Lista l){
 int insere_inicio(Lista *p, void *info){
 	Elemento *novo = aloca_elemento(info, p->tamInfo);
 	if(novo == NULL)
-		return 0; //Erro, falta de memória!
+		return 0; //Erro, falta de memÃ³ria!
 	novo->proximo = p->cabeca;
 	p->cabeca = novo;
 	p->qtd++;
@@ -61,7 +61,7 @@ int insere_fim(Lista *p, void *info){
 		aux = aux->proximo;
 	Elemento *novo = aloca_elemento(info, p->tamInfo);
 	if(novo == NULL)
-		return 0; //Erro, falta de memória!
+		return 0; //Erro, falta de memÃ³ria!
 	aux->proximo = novo;
 	novo->proximo = NULL;
 	p->qtd++;
@@ -95,11 +95,11 @@ int insere_pos(Lista *p, void *info, int pos){
 	Elemento *aux = p->cabeca;
 	int cont;
 	for(cont = 0; cont < pos - 1; cont++){
-		aux = aux->proximo;  // Vai até elemento em pos-1
+		aux = aux->proximo;  // Vai atÃ© elemento em pos-1
 	}
 	Elemento *novo = aloca_elemento(info, p->tamInfo);
 	if(novo == NULL){
-		return 0;  // Erro, falta de memória.
+		return 0;  // Erro, falta de memÃ³ria.
 	}
 	novo->proximo = aux->proximo;
 	aux->proximo = novo;
@@ -120,7 +120,7 @@ int remove_pos(Lista *p, void *info, int pos){
 	Elemento *aux = p->cabeca;
 	int cont;
 	for(cont = 0; cont < pos-1; cont++){
-		aux = aux->proximo; //vai até pos-1
+		aux = aux->proximo; //vai atÃ© pos-1
 	}
 	Elemento *x = aux->proximo;
 	aux->proximo = x->proximo;
@@ -148,7 +148,7 @@ void mostra_lista(Lista l, void (*mostra)(void *)){
 		printf("Dados da lista:\n");
 		Elemento *p = l.cabeca;
 		while(p != NULL){
-			mostra(p->info); //Invocação por callback.
+			mostra(p->info); //InvocaÃ§Ã£o por callback.
 			p = p->proximo;
 		}
 	}
@@ -164,7 +164,7 @@ int le_valor(Lista l, void *info, int pos){
 	Elemento *aux = l.cabeca;
 	int cont;
 	for(cont = 0; cont < pos; cont++){
-		aux = aux->proximo; // Vai até elemento em pos
+		aux = aux->proximo; // Vai atÃ© elemento em pos
 	}
 	memcpy(info, aux->info, l.tamInfo);
 	return 1; //Sucesso!
@@ -180,7 +180,7 @@ int modifica_valor(Lista l, void *info, int pos){
 	Elemento *aux = l.cabeca;
 	int cont;
 	for(cont = 0; cont < pos; cont++){
-		aux = aux->proximo; // Vai até elemento em pos.
+		aux = aux->proximo; // Vai atÃ© elemento em pos.
 	}
 	memcpy(aux->info, info, l.tamInfo);
 	return 1; //Sucesso! 
