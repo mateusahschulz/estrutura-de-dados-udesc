@@ -207,3 +207,31 @@ void limpa_lista(Lista *l){
 	l->cabeca = NULL;
 	l->qtd = 0;
 }
+
+void concatena(Lista &l1, Lista &l2){
+	Elemento *p = l1->cabeca;
+	if(p != NULL){
+		while(p->proximo != NULL){
+			p = p->proximo;
+		}
+		p->proximo = l2->cabeca;
+	}else{
+		l1->cabeca = l2->cabeca;
+	}
+	l2->cabeca = NULL;
+	l1->qtd += l2->qtd;
+	l2->qtd = 0;
+}
+
+int busca(Lista *l, void *info, int (*compara) (void*) (void*)){
+	Elemento *p = l.cabeca;
+	int count = 0;
+	while(p =! NULL){
+		if(compara(p->info, info) == 0){
+			return count;
+		}
+		p->proximo;
+		count++;
+	}
+	return -1;
+}

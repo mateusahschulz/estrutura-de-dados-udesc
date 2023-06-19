@@ -27,3 +27,5 @@ int le_valor(Lista l, void *info, int pos);
 int modifica_valor(Lista l, void *info, int pos);
 int conta_elementos(Lista l);
 void limpa_lista(Lista *l);
+void concatena(Lista &l1, Lista &l2);
+int busca(Lista *l, void *info, int (*compara) (void*) (void*));
