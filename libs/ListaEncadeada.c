@@ -49,7 +49,7 @@ int remove_inicio(Lista *p, void *info){
 	p->cabeca = aux->proximo;
 	free(aux->info);
 	free(aux);
-	p->qtd;
+	p->qtd--;
 	return 1; //Sucesso!
 }
 
